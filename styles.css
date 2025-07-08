@@ -1,0 +1,18 @@
+/* === CSS Functions === */
+
+/*
+
+    CSS functions are similar to programming languages in that they are reusable pieces of code that perform specific tasks
+
+    Functions are passed "arguments" between brackets, some examples include::after
+    1. rgb() / rgba ()
+    2. linear-gradient()
+    3. calc()
+    4. min() / max()
+    5. clamp()
+
+    CSS does not allow the creation of custom functions, they are all premade
+
+    Many CSS functions are important and useful for creating responsive design
+
+*/
