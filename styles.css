@@ -16,3 +16,71 @@
     Many CSS functions are important and useful for creating responsive design
 
 */
+
+/* calc()
+
+    The CSS calc() function performs a calculation and the result is used as the properties' value
+
+    One example of calc() could be to make the content take up most of the height except the height of the navigation, as shown::after
+
+    .content {
+        height: calc(100vh - 60px);
+    }
+
+    As the viewport resizes the value of 100vh will dynamically update and therefore so will the calculation, however it will always be -60px
+
+    The benefit of calc() is in allowing you to avoid hard-coding a range or using JS to calculate the value needed
+
+    ==============================================================================
+
+    Another example:
+
+    :root {
+        --header: 3rem;
+        --footer: 40px;
+        --main: calc(100vh - calc(var(--header) + var(--footer)));
+    }
+
+    --header, --footer, and --main are CSS variables
+
+    In this example, the outcomes is 100vh - (3rem + 40px)
+    Calc() can do maths with different units to reduce the need for repeating CSS rules
+
+*/
+
+/* Calc can also be used to create complimentary colours (https://moderncss.dev/practical-uses-of-css-math-functions-calc-clamp-min-max/https://moderncss.dev/practical-uses-of-css-math-functions-calc-clamp-min-max/) */
+
+.colours {
+  --base-hue: 140;
+  --saturation: 95%;
+  --lightness: 80%;
+  --rotation: 60;
+
+  color: #222;
+  text-align: center;
+}
+
+.colour {
+  padding: 0.25rem;
+  background-color: hsl(var(--hue), var(--saturation), var(--lightness));
+}
+
+.colour1 {
+  --hue: calc(var(--base-hue));
+}
+
+.colour2 {
+  --hue: calc(var(--base-hue) + var(--rotation));
+}
+
+.colour3 {
+  --hue: calc(var(--base-hue) + var(--rotation) * 2);
+}
+
+.colour4 {
+  --hue: calc(var(--base-hue) + var(--rotation) * 3);
+}
+
+.colour5 {
+  --hue: calc(var(--base-hue) + var(--rotation) * 4);
+}
