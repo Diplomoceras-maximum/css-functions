@@ -147,3 +147,43 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+/* max()
+
+  The max() function will use the largest value from a list of values as the property value
+
+  max() function sets a minimum value for an element 
+
+  For example:
+
+  margin-top: max(8vh, 2rem);
+
+  In this example, in taller viewports 8vh will be used, and on smaller or zoomed-in viewports, 2rem will be used
+
+  ==============================================================================
+
+  Another example:
+
+  .icon-button {
+      width: max(44px, 2em);
+      height: max(44px, 2em);
+  }
+
+  1. 44px is the minimum size (recommended by WCAG)
+  2. 2em keeps it responsive to the font size growing as needed
+  3. This ensure responsive design by scaling when user increases font size
+
+*/
+
+.icon-button {
+  width: max(44px, 2em);
+  height: max(44px, 2em);
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 1rem auto;
+  cursor: pointer;
+}
