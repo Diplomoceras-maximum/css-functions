@@ -84,3 +84,33 @@
 .colour5 {
   --hue: calc(var(--base-hue) + var(--rotation) * 4);
 }
+
+/* clamp()
+
+    The CSS clamp function takes three values, the first is the lowest value of range, the middle is the ideal value, and the third is the highest value in the range
+    
+    One example of the clamp function includes making fluid typography, typography that changes size based on the viewport size
+
+    h1 {
+      font-size: clamp(1.75rem, 4vw + 1rem, 3rem);
+    }
+
+    With this example the h1 will grow and shrink with screen size but will not overflow or take up too much of the screen
+
+    The main benefit of clamp() function is making elements responsive
+
+    ==============================================================================
+
+    Another example:
+
+    .element {
+      padding: 1.5rem clamp(1rem, 5%, 3rem);
+    }
+
+    In this example the padding has been set to change based on the width of the element, which negates the use of multiple media queries for smaller screens
+
+*/
+
+.content {
+  padding: 1.5rem clamp(1rem, 5%, 3rem);
+}
