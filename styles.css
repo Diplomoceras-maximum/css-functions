@@ -114,3 +114,36 @@
 .content {
   padding: 1.5rem clamp(1rem, 5%, 3rem);
 }
+
+/* min()
+
+  The min() function will use the smallest value from a list of values as the property value
+
+  min() functions sets a maximum values for an element 
+
+  For example:
+
+  width: min(80ch, 100vw)
+
+  In this example, 80ch will be used on larger screens since it is the smaller value, once the viewport shrinks, 100vw will be used because it will now be smaller than 80ch
+
+  ==============================================================================
+
+  Another example:
+
+  .container {
+      width: min(80ch, 100vw - 2rem);
+  }
+
+  1. On larger viewports the element will have a max size of 80ch
+  2. On smaller than 80ch widths the container will grow to 100vw - 2rem
+  3. The -2rem will add 1 rem of "padding" to each side
+  4. 100vw could also be replaced with 100%
+
+*/
+
+.content-two {
+  width: min(80ch, 100% - 2rem);
+  margin-right: auto;
+  margin-left: auto;
+}
